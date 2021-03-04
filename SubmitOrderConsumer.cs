@@ -29,7 +29,7 @@ namespace MassTransitRoutingSlipMonitoring
 
             routingSlipBuilder.AddSubscription(
                 routingSlipAddress,
-                RoutingSlipEvents.Completed | RoutingSlipEvents.Supplemental
+                RoutingSlipEvents.Completed
             );
             
             var routingSlip = routingSlipBuilder.Build();
