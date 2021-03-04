@@ -1,0 +1,17 @@
+version: "3.6"
+
+services:
+  rabbitmq:
+    image: masstransit/rabbitmq:latest
+    ports:
+     - "5672:5672"
+     - "15672:15672"
+     - "15692:15692"
+    healthcheck:
+        timeout: 5s
+        interval: 5s
+        retries: 10
+        test:
+          - "CMD"
+          - "rabbitmqctl"
+          - "status"
